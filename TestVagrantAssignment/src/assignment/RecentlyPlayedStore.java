@@ -47,7 +47,15 @@ public class RecentlyPlayedStore {
         store.addSong("user1", "S3");
         store.addSong("user1", "S4");
 
-        System.out.println(Arrays.toString(store.getRecentlyPlayedSongs("user1"))); // Output: [S1, S2, S4]
+        System.out.println(Arrays.toString(store.getRecentlyPlayedSongs("user1"))); // Output: [S2, S3, S4]
+        
+        
+        store.addSong("user1", "S2");
+        store.addSong("user1", "S3");
+        store.addSong("user1", "S4");
+        store.addSong("user1", "S5");
+
+        System.out.println(Arrays.toString(store.getRecentlyPlayedSongs("user1"))); // Output: [S3, S4, S5]
     }
 }
 
